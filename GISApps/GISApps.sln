@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GISApps", "GISApps.csproj", "{B5E68976-5A17-497A-8FC4-238C41CEDB07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "..\Controls\Controls.csproj", "{5C58B4A5-E9BB-41FC-9167-3F9396E9B4FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{B5E68976-5A17-497A-8FC4-238C41CEDB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5E68976-5A17-497A-8FC4-238C41CEDB07}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5E68976-5A17-497A-8FC4-238C41CEDB07}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5C58B4A5-E9BB-41FC-9167-3F9396E9B4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C58B4A5-E9BB-41FC-9167-3F9396E9B4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C58B4A5-E9BB-41FC-9167-3F9396E9B4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C58B4A5-E9BB-41FC-9167-3F9396E9B4FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

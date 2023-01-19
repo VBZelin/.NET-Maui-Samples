@@ -1,12 +1,24 @@
-﻿namespace GISApps;
+﻿using GISApps.Pages;
+using GISApps.UI;
 
-public partial class App : Application
+namespace GISApps
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+            MainPage = new AppShell();
+
+            RegisterAllRoutes();
+        }
+
+        private void RegisterAllRoutes()
+        {
+            Routing.RegisterRoute(nameof(GalleryPage), typeof(GalleryPage));
+            Routing.RegisterRoute(nameof(TextButtonPage), typeof(TextButtonPage));
+        }
+    }
 }
 

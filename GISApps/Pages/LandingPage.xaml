@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:assets="clr-namespace:GISApps.Assets"
+             xmlns:pages="clr-namespace:GISApps.Pages"
+             x:Class="GISApps.Pages.LandingPage"
+             Title="GISApps Demo">
+
+    <ContentPage.BindingContext>
+        <pages:LandingPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid Margin="20, 20, 20, 20">
+        <Grid.RowDefinitions>
+            <!-- Empty space, index: 0 -->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <!-- Empty space, index: 8 -->
+            <RowDefinition Height="*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="{x:Static assets:Constants.APP_DESCRIPTION}"
+            FontSize="16"
+            CharacterSpacing="0.25" />
+
+        <Button
+            Grid.Row="3"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="View UI samples"
+            Command="{Binding OpenSamplesCommand}"
+            CommandParameter="{x:Static assets:Category.UI}" />
+
+        <Button
+            Grid.Row="5"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="View ArcGIS Runtime samples"
+            Command="{Binding OpenSamplesCommand}"
+            CommandParameter="{x:Static assets:Category.ArcGISRuntime}" />
+
+        <Button
+            Grid.Row="7"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Text="View Framework samples"
+            Command="{Binding OpenSamplesCommand}"
+            CommandParameter="{x:Static assets:Category.Framework}" />
+    </Grid>
+</ContentPage>

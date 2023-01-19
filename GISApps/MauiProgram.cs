@@ -1,25 +1,44 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace GISApps;
-
-public static class MauiProgram
+namespace GISApps
 {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .RegisterAppServices()
+                .RegisterViewModels()
+                .RegisterViews()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
 
 #if DEBUG
-		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
-	}
+            return builder.Build();
+        }
+
+        public static MauiAppBuilder RegisterAppServices(this MauiAppBuilder mauiAppBuilder)
+        {
+            return mauiAppBuilder;
+        }
+
+        public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+        {
+            return mauiAppBuilder;
+        }
+
+        public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+        {
+            return mauiAppBuilder;
+        }
+    }
 }
 
