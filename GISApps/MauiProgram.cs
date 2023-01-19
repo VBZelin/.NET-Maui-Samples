@@ -16,6 +16,9 @@ namespace GISApps
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+
+                    // Added custom fonts in here
+                    fonts.AddFont("fa-regular-400.ttf", "FaRegularIcon");
                 });
 
 #if DEBUG

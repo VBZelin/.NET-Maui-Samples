@@ -10,6 +10,14 @@
         <pages:LandingPageViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Settings"
+            Order="Primary"
+            Priority="0"
+            Clicked="OnOpenSettings"/>
+    </ContentPage.ToolbarItems>
+
     <Grid Margin="20, 20, 20, 20">
         <Grid.RowDefinitions>
             <!-- Empty space, index: 0 -->

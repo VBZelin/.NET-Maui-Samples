@@ -17,6 +17,7 @@ namespace GISApps
         private void RegisterAllRoutes()
         {
             Routing.RegisterRoute(nameof(GalleryPage), typeof(GalleryPage));
+            Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
             Routing.RegisterRoute(nameof(TextButtonPage), typeof(TextButtonPage));
         }
     }

@@ -402,5 +402,10 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
 
+    <!--Custom styles in here-->
+    <Style TargetType="Label" x:Key="FaRegularIconStyle">
+        <Setter Property="FontFamily" Value="FaRegularIcon" />
+    </Style>
+
 </ResourceDictionary>
 

@@ -11,6 +11,11 @@ namespace GISApps.Pages
         {
             InitializeComponent();
         }
+
+        private async void OnOpenSettings(System.Object sender, System.EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"/{nameof(SettingsPage)}");
+        }
     }
 
     public class LandingPageViewModel

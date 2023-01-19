@@ -64,6 +64,7 @@
 	  <None Remove="Assets\" />
 	  <None Remove="Pages\" />
 	  <None Remove="Models\" />
+	  <None Remove="Resources\Fonts\fa-regular-400.ttf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="UI\" />
@@ -83,5 +84,11 @@
 	  <MauiXaml Update="UI\TextButtonPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Fonts\fa-regular-400.ttf" />
 	</ItemGroup>
 </Project>
