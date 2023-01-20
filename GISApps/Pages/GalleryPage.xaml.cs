@@ -20,21 +20,21 @@ public partial class GalleryPage : ContentPage
         init();
     }
 
-    private async void OnItemTapped(Object sender, ItemTappedEventArgs e)
+    async void OnItemTapped(Object sender, ItemTappedEventArgs e)
     {
         Sample item = e.Item as Sample;
 
         await Shell.Current.GoToAsync($"/{item.FileName}");
     }
 
-    private void init()
+    void init()
     {
         Root.Title = CategoryToTitleConverter(Category);
 
         CreateCollection();
     }
 
-    private void CreateCollection()
+    void CreateCollection()
     {
         var items = Samples.All;
 
@@ -45,7 +45,7 @@ public partial class GalleryPage : ContentPage
         ListView.ItemsSource = filteredItems;
     }
 
-    private string CategoryToTitleConverter(Category category)
+    string CategoryToTitleConverter(Category category)
     {
         switch (category)
         {
