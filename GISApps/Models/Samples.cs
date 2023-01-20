@@ -12,8 +12,13 @@ namespace GISApps.Models
         {
             All = new List<Sample>();
 
-            // Add all samples below:
+            // Add UI samples below:
             AddPage(Category.UI, "Text Button", nameof(TextButtonPage), typeof(TextButtonPage));
+
+            // Add ArcGIS Runtime samples below:
+
+            // Add Framework samples below:
+
         }
 
         static void AddPage(Category category, string name, string fileName, Type type)
