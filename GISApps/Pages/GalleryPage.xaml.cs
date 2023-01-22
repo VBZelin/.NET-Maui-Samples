@@ -90,7 +90,7 @@ namespace GISApps.Pages
             return sample.Name.ToLower().Contains(SearchQuery);
         }
 
-        private string CategoryToTitleConverter(Category category)
+        private static string CategoryToTitleConverter(Category category)
         {
             switch (category)
             {
