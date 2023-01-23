@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GISApps.Framework.SecureStoragePage"
              Title="Secure storage demo">
+
     <Grid
         Margin="20, 100, 20, 100"
         VerticalOptions="Center">
@@ -13,6 +14,10 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="80" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -28,18 +33,19 @@
             x:Name="Value"
             Placeholder="Enter value"/>
 
-        <HorizontalStackLayout
+        <Button
             Grid.Row="5"
-            HorizontalOptions="Center"
-            Spacing="80">
+            Text="Save key"
+            Clicked="OnSaveKeyClicked" />
 
-            <Button
-                Text="Save key"
-                Clicked="OnSetClicked" />
+        <Button
+            Grid.Row="7"
+            Text="Load key"
+            Clicked="OnLoadKeyClicked" />
 
-            <Button
-                Text="Load key"
-                Clicked="OnGetClicked" />
-        </HorizontalStackLayout>
+        <Button
+            Grid.Row="9"
+            Text="Remove key"
+            Clicked="OnRemoveKeyClicked" />
     </Grid>
 </ContentPage>

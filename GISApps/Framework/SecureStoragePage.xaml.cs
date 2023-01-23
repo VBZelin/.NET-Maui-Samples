@@ -7,11 +7,11 @@ public partial class SecureStoragePage : ContentPage
         InitializeComponent();
     }
 
-    private async void OnSetClicked(System.Object sender, System.EventArgs e)
+    private async void OnSaveKeyClicked(System.Object sender, System.EventArgs e)
     {
         if (string.IsNullOrEmpty(Key.Text))
         {
-            await DisplayAlert("Error", "Key is empty!", "OK");
+            await DisplayAlert("Error", "Key is empty!", "OKAY");
 
             return;
         }
@@ -30,7 +30,7 @@ public partial class SecureStoragePage : ContentPage
         await DisplayAlert("Result", $"{Key.Text} has been saved: {Value.Text}", "OKAY");
     }
 
-    private async void OnGetClicked(System.Object sender, System.EventArgs e)
+    private async void OnLoadKeyClicked(System.Object sender, System.EventArgs e)
     {
         if (string.IsNullOrEmpty(Key.Text))
         {
@@ -56,5 +56,30 @@ public partial class SecureStoragePage : ContentPage
         }
 
         await DisplayAlert("Result", $"{Key.Text}: {value}", "OKAY");
+    }
+
+    private async void OnRemoveKeyClicked(System.Object sender, System.EventArgs e)
+    {
+        if (string.IsNullOrEmpty(Key.Text))
+        {
+            await DisplayAlert("Error", "Key is empty!", "OKAY");
+
+            return;
+        }
+
+        bool success = false;
+
+        try
+        {
+            success = SecureStorage.Remove(Key.Text);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Operation failed", ex.Message, "OKAY");
+
+            return;
+        }
+
+        await DisplayAlert("Result", $"{Key.Text} has been removed: {success}", "OKAY");
     }
 }
