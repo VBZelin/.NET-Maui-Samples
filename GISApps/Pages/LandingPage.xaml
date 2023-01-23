@@ -12,26 +12,17 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Text="Settings"
+            IconImageSource="{x:Static assets:Images.SETTINGS}"
             Order="Primary"
             Priority="0"
             Clicked="OnOpenSettings"/>
     </ContentPage.ToolbarItems>
 
-    <Grid Margin="20, 20, 20, 20">
+    <Grid Margin="20, 100, 20, 100">
         <Grid.RowDefinitions>
-            <!-- Empty space, index: 0 -->
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="Auto" />
-            <!-- Empty space, index: 8 -->
-            <RowDefinition Height="*" />
-            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -39,7 +30,7 @@
         </Grid.ColumnDefinitions>
 
         <Label
-            Grid.Row="1"
+            Grid.Row="0"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             Text="{x:Static assets:Constants.APP_DESCRIPTION}"
@@ -47,27 +38,10 @@
             CharacterSpacing="0.25" />
 
         <Button
-            Grid.Row="3"
+            Grid.Row="2"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            Text="View UI samples"
-            Command="{Binding OpenSamplesCommand}"
-            CommandParameter="{x:Static assets:Category.UI}" />
-
-        <Button
-            Grid.Row="5"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Text="View ArcGIS Runtime samples"
-            Command="{Binding OpenSamplesCommand}"
-            CommandParameter="{x:Static assets:Category.ArcGISRuntime}" />
-
-        <Button
-            Grid.Row="7"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Text="View Framework samples"
-            Command="{Binding OpenSamplesCommand}"
-            CommandParameter="{x:Static assets:Category.Framework}" />
+            Text="{x:Static assets:Constants.VIEW_SAMPLES}"
+            Command="{Binding OpenSamplesCommand}" />
     </Grid>
 </ContentPage>

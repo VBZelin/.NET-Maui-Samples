@@ -4,9 +4,10 @@ namespace GISApps.Assets
 {
     public enum Category : int
     {
-        UI = 0,
-        ArcGISRuntime = 1,
-        Framework = 2
+        Default = 0,
+        UI = 1,
+        ArcGISRuntime = 2,
+        Framework = 3
     }
 }
 

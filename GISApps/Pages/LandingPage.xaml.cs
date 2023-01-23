@@ -24,12 +24,7 @@ namespace GISApps.Pages
 
         public LandingPageViewModel()
         {
-            OpenSamplesCommand = new Command(async (category) =>
-            {
-                var navigationParams = new Dictionary<string, object> { { "Category", category } };
-
-                await Shell.Current.GoToAsync($"/{nameof(GalleryPage)}", navigationParams);
-            });
+            OpenSamplesCommand = new Command(async (category) => await Shell.Current.GoToAsync($"/{nameof(GalleryPage)}"));
         }
     }
 }
