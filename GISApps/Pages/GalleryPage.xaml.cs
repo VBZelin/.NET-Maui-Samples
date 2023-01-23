@@ -35,7 +35,7 @@ namespace GISApps.Pages
 
         private async void OnOpenSortMenu(System.Object sender, System.EventArgs e)
         {
-            var action = await DisplayActionSheet(Constants.CHOOSE_CATEGORY, "Cancel", null, "UI", "ArcGIS Runtime", "Framework", "Default");
+            var action = await DisplayActionSheet(Constants.CHOOSE_CATEGORY, "CANCEL", null, "UI", "ArcGIS Runtime", "Framework", "Default");
 
             switch (action)
             {
@@ -59,7 +59,7 @@ namespace GISApps.Pages
 
                     break;
 
-                case "Cancel":
+                case "CANCEL":
                 default:
                     return;
             }

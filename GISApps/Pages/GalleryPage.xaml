@@ -31,16 +31,12 @@
             ItemsSource="{Binding SearchResults}"
             ItemTapped="OnItemTapped"
             SelectionMode="None">
+
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Label
-                            Margin="20, 0, 20, 0"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start"
-                            Text="{Binding Name}"
-                            FontSize="16" />
-                    </ViewCell>
+                    <TextCell
+                        Text="{Binding Name}"
+                        Detail="{Binding Detail}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

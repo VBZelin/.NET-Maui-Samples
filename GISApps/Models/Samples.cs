@@ -14,12 +14,12 @@ namespace GISApps.Models
             All = new List<Sample>();
 
             // Add UI samples below:
-            AddPage(Category.UI, "Custom image", "Custom image control with loading indicator", nameof(CustomImagePage), typeof(CustomImagePage));
+            AddPage(Category.UI, "Custom image", "Custom image with loading indicator", nameof(CustomImagePage), typeof(CustomImagePage));
 
             // Add ArcGIS Runtime samples below:
 
             // Add Framework samples below:
-            AddPage(Category.Framework, "Secure storage", "Secure storage", nameof(SecureStoragePage), typeof(SecureStoragePage));
+            AddPage(Category.Framework, "Secure storage", "Secure storage demo", nameof(SecureStoragePage), typeof(SecureStoragePage));
         }
 
         static void AddPage(Category category, string name, string detail, string fileName, Type type)
