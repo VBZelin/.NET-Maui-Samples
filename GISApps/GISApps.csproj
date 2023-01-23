@@ -85,10 +85,13 @@
 	  <MauiXaml Update="Pages\GalleryPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="UI\TextButtonPage.xaml">
+	  <MauiXaml Update="UI\CustomImagePage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Framework\SecureStoragePage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>

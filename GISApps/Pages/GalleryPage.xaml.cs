@@ -35,7 +35,7 @@ namespace GISApps.Pages
 
         private async void OnOpenSortMenu(System.Object sender, System.EventArgs e)
         {
-            var action = await DisplayActionSheet("Please select samples category:", "Cancel", null, "UI", "ArcGIS Runtime", "Framework");
+            var action = await DisplayActionSheet(Constants.CHOOSE_CATEGORY, "Cancel", null, "UI", "ArcGIS Runtime", "Framework", "Default");
 
             switch (action)
             {
@@ -54,11 +54,12 @@ namespace GISApps.Pages
 
                     break;
 
-                case "Cancel":
+                case "Default":
                     ViewModel.SelectCategory(Category.Default);
 
                     break;
 
+                case "Cancel":
                 default:
                     return;
             }
@@ -124,7 +125,7 @@ namespace GISApps.Pages
         public bool SearchFunction(Sample sample)
         {
             return (Category == Category.Default || Category == sample.Category)
-                && sample.Name.ToLower().Contains(SearchQuery);
+                && (sample.Name.ToLower().Contains(SearchQuery) || sample.Detail.ToLower().Contains(SearchQuery));
         }
 
         private static string CategoryToTitleConverter(Category category)

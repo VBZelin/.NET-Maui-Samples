@@ -27,6 +27,7 @@
 	  <None Remove="Framework\" />
 	  <None Remove="ArcGISRuntime\" />
 	  <None Remove="CommunityToolkit.Mvvm" />
+	  <None Remove="UI\CustomImage\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Platforms\iOS\" />
@@ -37,8 +38,14 @@
 	  <Folder Include="UI\" />
 	  <Folder Include="Framework\" />
 	  <Folder Include="ArcGISRuntime\" />
+	  <Folder Include="UI\CustomImage\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="UI\CustomImage\CustomImage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

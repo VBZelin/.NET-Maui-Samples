@@ -1,6 +1,7 @@
 ﻿using System;
 using GISApps.Assets;
 using GISApps.UI;
+using GISApps.Framework;
 
 namespace GISApps.Models
 {
@@ -13,20 +14,21 @@ namespace GISApps.Models
             All = new List<Sample>();
 
             // Add UI samples below:
-            AddPage(Category.UI, "Text Button", nameof(TextButtonPage), typeof(TextButtonPage));
+            AddPage(Category.UI, "Custom image", "Custom image control with loading indicator", nameof(CustomImagePage), typeof(CustomImagePage));
 
             // Add ArcGIS Runtime samples below:
 
             // Add Framework samples below:
-
+            AddPage(Category.Framework, "Secure storage", "Secure storage", nameof(SecureStoragePage), typeof(SecureStoragePage));
         }
 
-        static void AddPage(Category category, string name, string fileName, Type type)
+        static void AddPage(Category category, string name, string detail, string fileName, Type type)
         {
             All.Add(new Sample
             {
                 Category = category,
                 Name = name,
+                Detail = detail,
                 FileName = fileName
             });
 

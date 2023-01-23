@@ -7,6 +7,7 @@ namespace GISApps.Models
     {
         public Category Category { get; set; }
         public string Name { get; set; }
+        public string Detail { get; set; }
         public string FileName { get; set; }
     }
 }
