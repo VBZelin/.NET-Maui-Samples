@@ -34,6 +34,11 @@ The .NET MAUI Community Toolkit is a collection of common elements for developme
 
 * [.Net Maui Installation](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin)
 * [Install and manage packages using NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio)
-    
+
+## Code review
+
+* All team members can participate
+* Follow [C# Code Convention](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) and [XAML Code Convention]()
+
 ## Screenshot
 <img src="https://user-images.githubusercontent.com/14915451/214235810-3f431260-d8bd-46ad-bbcb-494723be74d9.png" width=300> | <img src="https://user-images.githubusercontent.com/14915451/214235873-d4989a7e-26e8-4792-bb5f-8f829fc1179a.png" width=300> | <img src="https://user-images.githubusercontent.com/14915451/214235912-ad5a2ddc-81d1-4d40-9ab2-4b5a780ac87d.png" width=300>
