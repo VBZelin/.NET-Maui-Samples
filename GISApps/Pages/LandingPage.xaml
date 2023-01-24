@@ -18,7 +18,10 @@
             Clicked="OnOpenSettings"/>
     </ContentPage.ToolbarItems>
 
-    <Grid Margin="20, 100, 20, 100">
+    <Grid
+        Margin="20, 100, 20, 100"
+        HorizontalOptions="Center">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -31,16 +34,12 @@
 
         <Label
             Grid.Row="0"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
             Text="{x:Static assets:Constants.APP_DESCRIPTION}"
             FontSize="16"
             CharacterSpacing="0.25" />
 
         <Button
             Grid.Row="2"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
             Text="{x:Static assets:Constants.VIEW_SAMPLES}"
             Command="{Binding OpenSamplesCommand}" />
     </Grid>
